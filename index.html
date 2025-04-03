@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up Form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="lcontainer">
+        <div class="logobox">
+          <img
+            src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+            height="200px"
+            width="auto"
+            alt=""
+          />
+          <h1>ODIN</h1>
+        </div>
+      </div>
+
+      <div class="rcontainer">
+        <div class="top">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. <br />
+            Sign up <em>now</em> to get started.
+            <br />
+            <br />
+            You <em>know</em> you want to.
+          </p>
+        </div>
+        <div class="mid">
+          <h1>Let's do this!</h1>
+          <form id="signup" action="" method="post">
+            <div>
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" required pattern="^[A-Z][a-zA-Z]{1,49}$" placeholder="John"/>
+            </div>
+            <div>
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" required pattern="^[A-Z][a-zA-Z]{1,49}$" placeholder="Doe"/>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="johndoe@gmail.com"/>
+            </div>
+            <div>
+              <label for="phonenum">Phone Number</label>
+              <input type="tel" id="phonenum" name="phonenum" required pattern="^\+?\d{1,3}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$" placeholder="e.g. 123-456-7890"/>
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" placeholder="e.g. Ex@mple944"/>
+            </div>
+            <div>
+              <label for="cpassword">Confirm Password</label>
+              <input type="password" id="cpassword" name="cpassword" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" placeholder="e.g. Ex@mple944"/>
+            </div>
+          </form>
+        </div>
+        <div class="bot">
+          <div>
+            <button form="signup">Create Account</button>
+          </div>
+          <h2>Already have an account? <a href="/index.html">Log in</a></h2>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
